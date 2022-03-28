@@ -73,23 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Frm_Dashboard.Designer.vb">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Dashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Saroeun.Designer.vb">
-      <DependentUpon>Frm_Saroeun.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Saroeun.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -107,31 +94,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Frm_SreyKea.Designer.vb">
-      <DependentUpon>Frm_SreyKea.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_SreyKea.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Saroeun.resx">
-      <DependentUpon>Frm_Saroeun.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SreyKea.resx">
-      <DependentUpon>Frm_SreyKea.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
