@@ -26,9 +26,13 @@ Partial Class Frm_Dashboard
         '
         'Frm_Dashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(15.0!, 36.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(231, 109)
+        Me.BackColor = System.Drawing.Color.MistyRose
+        Me.ClientSize = New System.Drawing.Size(582, 435)
+        Me.Font = New System.Drawing.Font("Khmer OS Siemreap", 11.8!)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.Name = "Frm_Dashboard"
         Me.Text = "Frm_Dashboard"
         Me.ResumeLayout(False)
