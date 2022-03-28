@@ -101,10 +101,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="srey khea.Designer.vb">
-      <DependentUpon>srey khea.vb</DependentUpon>
+    <Compile Include="Frm_SreyKea.Designer.vb">
+      <DependentUpon>Frm_SreyKea.vb</DependentUpon>
     </Compile>
-    <Compile Include="srey khea.vb">
+    <Compile Include="Frm_SreyKea.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -121,8 +121,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="srey khea.resx">
-      <DependentUpon>srey khea.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_SreyKea.resx">
+      <DependentUpon>Frm_SreyKea.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
