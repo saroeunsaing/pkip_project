@@ -48,16 +48,23 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -73,16 +80,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Frm,_Login.Designer.vb">
+      <DependentUpon>Frm,_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm,_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Frm_Dashboard.Designer.vb">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Frm_Users.Designer.vb">
+      <DependentUpon>Frm_Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,8 +116,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Frm,_Login.resx">
+      <DependentUpon>Frm,_Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Users.resx">
+      <DependentUpon>Frm_Users.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -117,6 +143,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\" />
