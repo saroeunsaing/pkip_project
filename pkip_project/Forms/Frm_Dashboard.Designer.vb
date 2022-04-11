@@ -22,17 +22,18 @@ Partial Class Frm_Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel_Title = New System.Windows.Forms.Panel()
         Me.btn_maximize = New FontAwesome.Sharp.IconButton()
         Me.bnt_minimize = New FontAwesome.Sharp.IconButton()
-        Me.tbn_restore = New FontAwesome.Sharp.IconButton()
+        Me.btn_restore = New FontAwesome.Sharp.IconButton()
         Me.btn_close = New FontAwesome.Sharp.IconButton()
         Me.Panel_Menu = New System.Windows.Forms.Panel()
         Me.logo = New FontAwesome.Sharp.IconPictureBox()
         Me.btn_logout = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.btn_menu = New FontAwesome.Sharp.IconButton()
-        Me.bnt_home = New FontAwesome.Sharp.IconButton()
+        Me.btn_home = New FontAwesome.Sharp.IconButton()
         Me.whatapp = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.instagram = New FontAwesome.Sharp.IconButton()
@@ -41,6 +42,9 @@ Partial Class Frm_Dashboard
         Me.messager = New FontAwesome.Sharp.IconButton()
         Me.facebook = New FontAwesome.Sharp.IconButton()
         Me.Panel_Content = New System.Windows.Forms.Panel()
+        Me.Timer_Show = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer_Hide = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_User = New FontAwesome.Sharp.IconButton()
         Me.Panel_Title.SuspendLayout()
         Me.Panel_Menu.SuspendLayout()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +55,7 @@ Partial Class Frm_Dashboard
         Me.Panel_Title.BackColor = System.Drawing.Color.LightGray
         Me.Panel_Title.Controls.Add(Me.btn_maximize)
         Me.Panel_Title.Controls.Add(Me.bnt_minimize)
-        Me.Panel_Title.Controls.Add(Me.tbn_restore)
+        Me.Panel_Title.Controls.Add(Me.btn_restore)
         Me.Panel_Title.Controls.Add(Me.btn_close)
         Me.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Title.Location = New System.Drawing.Point(0, 0)
@@ -61,6 +65,7 @@ Partial Class Frm_Dashboard
         '
         'btn_maximize
         '
+        Me.btn_maximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_maximize.FlatAppearance.BorderSize = 0
         Me.btn_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_maximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize
@@ -75,6 +80,7 @@ Partial Class Frm_Dashboard
         '
         'bnt_minimize
         '
+        Me.bnt_minimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bnt_minimize.FlatAppearance.BorderSize = 0
         Me.bnt_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bnt_minimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize
@@ -87,22 +93,25 @@ Partial Class Frm_Dashboard
         Me.bnt_minimize.TabIndex = 2
         Me.bnt_minimize.UseVisualStyleBackColor = True
         '
-        'tbn_restore
+        'btn_restore
         '
-        Me.tbn_restore.FlatAppearance.BorderSize = 0
-        Me.tbn_restore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.tbn_restore.IconChar = FontAwesome.Sharp.IconChar.WindowRestore
-        Me.tbn_restore.IconColor = System.Drawing.Color.Brown
-        Me.tbn_restore.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.tbn_restore.IconSize = 35
-        Me.tbn_restore.Location = New System.Drawing.Point(1321, 0)
-        Me.tbn_restore.Name = "tbn_restore"
-        Me.tbn_restore.Size = New System.Drawing.Size(35, 35)
-        Me.tbn_restore.TabIndex = 1
-        Me.tbn_restore.UseVisualStyleBackColor = True
+        Me.btn_restore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_restore.FlatAppearance.BorderSize = 0
+        Me.btn_restore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_restore.IconChar = FontAwesome.Sharp.IconChar.WindowRestore
+        Me.btn_restore.IconColor = System.Drawing.Color.Brown
+        Me.btn_restore.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_restore.IconSize = 35
+        Me.btn_restore.Location = New System.Drawing.Point(1321, 0)
+        Me.btn_restore.Name = "btn_restore"
+        Me.btn_restore.Size = New System.Drawing.Size(35, 35)
+        Me.btn_restore.TabIndex = 1
+        Me.btn_restore.UseVisualStyleBackColor = True
+        Me.btn_restore.Visible = False
         '
         'btn_close
         '
+        Me.btn_close.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_close.FlatAppearance.BorderSize = 0
         Me.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_close.IconChar = FontAwesome.Sharp.IconChar.WindowClose
@@ -118,11 +127,12 @@ Partial Class Frm_Dashboard
         'Panel_Menu
         '
         Me.Panel_Menu.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Panel_Menu.Controls.Add(Me.btn_User)
         Me.Panel_Menu.Controls.Add(Me.logo)
         Me.Panel_Menu.Controls.Add(Me.btn_logout)
         Me.Panel_Menu.Controls.Add(Me.IconButton2)
         Me.Panel_Menu.Controls.Add(Me.btn_menu)
-        Me.Panel_Menu.Controls.Add(Me.bnt_home)
+        Me.Panel_Menu.Controls.Add(Me.btn_home)
         Me.Panel_Menu.Controls.Add(Me.whatapp)
         Me.Panel_Menu.Controls.Add(Me.IconButton1)
         Me.Panel_Menu.Controls.Add(Me.instagram)
@@ -159,9 +169,9 @@ Partial Class Frm_Dashboard
         Me.btn_logout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt
         Me.btn_logout.IconColor = System.Drawing.Color.Brown
         Me.btn_logout.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btn_logout.IconSize = 35
+        Me.btn_logout.IconSize = 40
         Me.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_logout.Location = New System.Drawing.Point(0, 494)
+        Me.btn_logout.Location = New System.Drawing.Point(-5, 493)
         Me.btn_logout.Name = "btn_logout"
         Me.btn_logout.Size = New System.Drawing.Size(294, 35)
         Me.btn_logout.TabIndex = 15
@@ -178,9 +188,9 @@ Partial Class Frm_Dashboard
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog
         Me.IconButton2.IconColor = System.Drawing.Color.Brown
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 35
+        Me.IconButton2.IconSize = 40
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(0, 453)
+        Me.IconButton2.Location = New System.Drawing.Point(-5, 452)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(294, 35)
         Me.IconButton2.TabIndex = 14
@@ -190,6 +200,7 @@ Partial Class Frm_Dashboard
         '
         'btn_menu
         '
+        Me.btn_menu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_menu.FlatAppearance.BorderSize = 0
         Me.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_menu.IconChar = FontAwesome.Sharp.IconChar.List
@@ -202,34 +213,35 @@ Partial Class Frm_Dashboard
         Me.btn_menu.TabIndex = 13
         Me.btn_menu.UseVisualStyleBackColor = True
         '
-        'bnt_home
+        'btn_home
         '
-        Me.bnt_home.FlatAppearance.BorderSize = 0
-        Me.bnt_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bnt_home.Font = New System.Drawing.Font("Khmer OS Siemreap", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bnt_home.ForeColor = System.Drawing.Color.Brown
-        Me.bnt_home.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.bnt_home.IconColor = System.Drawing.Color.Brown
-        Me.bnt_home.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.bnt_home.IconSize = 35
-        Me.bnt_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bnt_home.Location = New System.Drawing.Point(0, 268)
-        Me.bnt_home.Name = "bnt_home"
-        Me.bnt_home.Size = New System.Drawing.Size(294, 35)
-        Me.bnt_home.TabIndex = 12
-        Me.bnt_home.Text = "ទំព័រដើម"
-        Me.bnt_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.bnt_home.UseVisualStyleBackColor = True
+        Me.btn_home.FlatAppearance.BorderSize = 0
+        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_home.Font = New System.Drawing.Font("Khmer OS Siemreap", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.ForeColor = System.Drawing.Color.Brown
+        Me.btn_home.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.btn_home.IconColor = System.Drawing.Color.Brown
+        Me.btn_home.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_home.IconSize = 40
+        Me.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_home.Location = New System.Drawing.Point(-3, 268)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Size = New System.Drawing.Size(298, 35)
+        Me.btn_home.TabIndex = 12
+        Me.btn_home.Text = "ទំព័រដើម"
+        Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_home.UseVisualStyleBackColor = True
         '
         'whatapp
         '
+        Me.whatapp.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.whatapp.FlatAppearance.BorderSize = 0
         Me.whatapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.whatapp.IconChar = FontAwesome.Sharp.IconChar.Whatsapp
         Me.whatapp.IconColor = System.Drawing.Color.Brown
         Me.whatapp.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.whatapp.IconSize = 35
-        Me.whatapp.Location = New System.Drawing.Point(12, 618)
+        Me.whatapp.Location = New System.Drawing.Point(1, 618)
         Me.whatapp.Name = "whatapp"
         Me.whatapp.Size = New System.Drawing.Size(35, 35)
         Me.whatapp.TabIndex = 11
@@ -237,6 +249,7 @@ Partial Class Frm_Dashboard
         '
         'IconButton1
         '
+        Me.IconButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.IconButton1.FlatAppearance.BorderSize = 0
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Tiktok
@@ -251,6 +264,7 @@ Partial Class Frm_Dashboard
         '
         'instagram
         '
+        Me.instagram.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.instagram.FlatAppearance.BorderSize = 0
         Me.instagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.instagram.IconChar = FontAwesome.Sharp.IconChar.Instagram
@@ -265,6 +279,7 @@ Partial Class Frm_Dashboard
         '
         'telegrame
         '
+        Me.telegrame.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.telegrame.FlatAppearance.BorderSize = 0
         Me.telegrame.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.telegrame.IconChar = FontAwesome.Sharp.IconChar.Telegram
@@ -279,6 +294,7 @@ Partial Class Frm_Dashboard
         '
         'youtube
         '
+        Me.youtube.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.youtube.FlatAppearance.BorderSize = 0
         Me.youtube.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.youtube.IconChar = FontAwesome.Sharp.IconChar.Youtube
@@ -293,6 +309,7 @@ Partial Class Frm_Dashboard
         '
         'messager
         '
+        Me.messager.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.messager.FlatAppearance.BorderSize = 0
         Me.messager.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.messager.IconChar = FontAwesome.Sharp.IconChar.FacebookMessenger
@@ -307,6 +324,7 @@ Partial Class Frm_Dashboard
         '
         'facebook
         '
+        Me.facebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.facebook.FlatAppearance.BorderSize = 0
         Me.facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.facebook.IconChar = FontAwesome.Sharp.IconChar.Facebook
@@ -321,11 +339,38 @@ Partial Class Frm_Dashboard
         '
         'Panel_Content
         '
-        Me.Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_Content.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel_Content.Location = New System.Drawing.Point(300, 35)
         Me.Panel_Content.Name = "Panel_Content"
         Me.Panel_Content.Size = New System.Drawing.Size(1100, 665)
         Me.Panel_Content.TabIndex = 2
+        '
+        'Timer_Show
+        '
+        '
+        'Timer_Hide
+        '
+        '
+        'btn_User
+        '
+        Me.btn_User.FlatAppearance.BorderSize = 0
+        Me.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_User.Font = New System.Drawing.Font("Khmer OS Siemreap", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_User.ForeColor = System.Drawing.Color.Brown
+        Me.btn_User.IconChar = FontAwesome.Sharp.IconChar.UserCog
+        Me.btn_User.IconColor = System.Drawing.Color.Brown
+        Me.btn_User.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_User.IconSize = 40
+        Me.btn_User.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_User.Location = New System.Drawing.Point(-6, 410)
+        Me.btn_User.Name = "btn_User"
+        Me.btn_User.Size = New System.Drawing.Size(294, 35)
+        Me.btn_User.TabIndex = 17
+        Me.btn_User.Text = "គណនីប្រើប្រាស់"
+        Me.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_User.UseVisualStyleBackColor = True
         '
         'Frm_Dashboard
         '
@@ -353,13 +398,13 @@ Partial Class Frm_Dashboard
     Friend WithEvents Panel_Content As Panel
     Friend WithEvents btn_maximize As FontAwesome.Sharp.IconButton
     Friend WithEvents bnt_minimize As FontAwesome.Sharp.IconButton
-    Friend WithEvents tbn_restore As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_restore As FontAwesome.Sharp.IconButton
     Friend WithEvents btn_close As FontAwesome.Sharp.IconButton
     Friend WithEvents logo As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents btn_logout As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents btn_menu As FontAwesome.Sharp.IconButton
-    Friend WithEvents bnt_home As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_home As FontAwesome.Sharp.IconButton
     Friend WithEvents whatapp As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents instagram As FontAwesome.Sharp.IconButton
@@ -367,4 +412,7 @@ Partial Class Frm_Dashboard
     Friend WithEvents youtube As FontAwesome.Sharp.IconButton
     Friend WithEvents messager As FontAwesome.Sharp.IconButton
     Friend WithEvents facebook As FontAwesome.Sharp.IconButton
+    Friend WithEvents Timer_Show As Timer
+    Friend WithEvents Timer_Hide As Timer
+    Friend WithEvents btn_User As FontAwesome.Sharp.IconButton
 End Class
