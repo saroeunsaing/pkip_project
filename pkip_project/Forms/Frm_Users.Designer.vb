@@ -22,32 +22,32 @@ Partial Class Frm_Users
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_title = New System.Windows.Forms.Panel()
+        Me.title = New FontAwesome.Sharp.IconButton()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel_left = New System.Windows.Forms.Panel()
-        Me.Panel_content = New System.Windows.Forms.Panel()
         Me.dgv_data = New System.Windows.Forms.DataGridView()
-        Me.txt_id = New System.Windows.Forms.TextBox()
-        Me.cmb_role = New System.Windows.Forms.ComboBox()
-        Me.Panel_id = New System.Windows.Forms.Panel()
-        Me.Icon_id = New FontAwesome.Sharp.IconButton()
+        Me.Panel_content = New System.Windows.Forms.Panel()
+        Me.btn_delete = New FontAwesome.Sharp.IconButton()
+        Me.btn_edit = New FontAwesome.Sharp.IconButton()
+        Me.btn_save = New FontAwesome.Sharp.IconButton()
+        Me.Icon_role = New FontAwesome.Sharp.IconButton()
+        Me.Panel_role = New System.Windows.Forms.Panel()
+        Me.Icon_password = New FontAwesome.Sharp.IconButton()
+        Me.Panel_password = New System.Windows.Forms.Panel()
+        Me.txt_password = New System.Windows.Forms.TextBox()
         Me.Icon_user = New FontAwesome.Sharp.IconButton()
         Me.Panel_user = New System.Windows.Forms.Panel()
         Me.txt_username = New System.Windows.Forms.TextBox()
-        Me.txt_password = New System.Windows.Forms.TextBox()
-        Me.Panel_password = New System.Windows.Forms.Panel()
-        Me.Icon_password = New FontAwesome.Sharp.IconButton()
-        Me.Icon_role = New FontAwesome.Sharp.IconButton()
-        Me.Panel_role = New System.Windows.Forms.Panel()
-        Me.btn_save = New FontAwesome.Sharp.IconButton()
-        Me.btn_edit = New FontAwesome.Sharp.IconButton()
-        Me.btn_delete = New FontAwesome.Sharp.IconButton()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.title = New FontAwesome.Sharp.IconButton()
+        Me.Icon_id = New FontAwesome.Sharp.IconButton()
+        Me.Panel_id = New System.Windows.Forms.Panel()
+        Me.cmb_role = New System.Windows.Forms.ComboBox()
+        Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Panel_title.SuspendLayout()
         Me.Panel_left.SuspendLayout()
-        Me.Panel_content.SuspendLayout()
         CType(Me.dgv_data, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_content.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel_title
@@ -61,6 +61,39 @@ Partial Class Frm_Users
         Me.Panel_title.Size = New System.Drawing.Size(1100, 35)
         Me.Panel_title.TabIndex = 2
         '
+        'title
+        '
+        Me.title.FlatAppearance.BorderSize = 0
+        Me.title.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.title.Font = New System.Drawing.Font("Khmer OS Siemreap", 9.8!)
+        Me.title.ForeColor = System.Drawing.Color.Brown
+        Me.title.IconChar = FontAwesome.Sharp.IconChar.Users
+        Me.title.IconColor = System.Drawing.Color.Brown
+        Me.title.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.title.IconSize = 35
+        Me.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.title.Location = New System.Drawing.Point(0, 0)
+        Me.title.Name = "title"
+        Me.title.Size = New System.Drawing.Size(311, 40)
+        Me.title.TabIndex = 15
+        Me.title.Text = "បង្កើតគណនីថ្មី"
+        Me.title.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.title.UseVisualStyleBackColor = True
+        '
+        'IconButton1
+        '
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.IconButton1.IconColor = System.Drawing.Color.Brown
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 35
+        Me.IconButton1.Location = New System.Drawing.Point(1062, 0)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(35, 35)
+        Me.IconButton1.TabIndex = 15
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
         'Panel_left
         '
         Me.Panel_left.Controls.Add(Me.dgv_data)
@@ -69,6 +102,31 @@ Partial Class Frm_Users
         Me.Panel_left.Name = "Panel_left"
         Me.Panel_left.Size = New System.Drawing.Size(550, 630)
         Me.Panel_left.TabIndex = 2
+        '
+        'dgv_data
+        '
+        Me.dgv_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_data.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_data.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dgv_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Khmer OS Siemreap", 10.8!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Brown
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_data.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_data.Location = New System.Drawing.Point(3, 3)
+        Me.dgv_data.MultiSelect = False
+        Me.dgv_data.Name = "dgv_data"
+        Me.dgv_data.ReadOnly = True
+        Me.dgv_data.RowHeadersVisible = False
+        Me.dgv_data.RowHeadersWidth = 51
+        Me.dgv_data.RowTemplate.Height = 24
+        Me.dgv_data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv_data.Size = New System.Drawing.Size(544, 624)
+        Me.dgv_data.TabIndex = 0
         '
         'Panel_content
         '
@@ -93,72 +151,109 @@ Partial Class Frm_Users
         Me.Panel_content.Size = New System.Drawing.Size(550, 630)
         Me.Panel_content.TabIndex = 3
         '
-        'dgv_data
+        'btn_delete
         '
-        Me.dgv_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_data.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgv_data.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dgv_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Khmer OS Siemreap", 10.8!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Brown
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_data.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgv_data.Location = New System.Drawing.Point(3, 3)
-        Me.dgv_data.MultiSelect = False
-        Me.dgv_data.Name = "dgv_data"
-        Me.dgv_data.ReadOnly = True
-        Me.dgv_data.RowHeadersVisible = False
-        Me.dgv_data.RowHeadersWidth = 51
-        Me.dgv_data.RowTemplate.Height = 24
-        Me.dgv_data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_data.Size = New System.Drawing.Size(544, 624)
-        Me.dgv_data.TabIndex = 0
+        Me.btn_delete.FlatAppearance.BorderSize = 0
+        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_delete.ForeColor = System.Drawing.Color.Brown
+        Me.btn_delete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.btn_delete.IconColor = System.Drawing.Color.Brown
+        Me.btn_delete.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_delete.IconSize = 40
+        Me.btn_delete.Location = New System.Drawing.Point(352, 496)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(151, 40)
+        Me.btn_delete.TabIndex = 14
+        Me.btn_delete.Text = "លុប"
+        Me.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_delete.UseVisualStyleBackColor = True
         '
-        'txt_id
+        'btn_edit
         '
-        Me.txt_id.BackColor = System.Drawing.Color.MistyRose
-        Me.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txt_id.ForeColor = System.Drawing.Color.Brown
-        Me.txt_id.Location = New System.Drawing.Point(100, 42)
-        Me.txt_id.Name = "txt_id"
-        Me.txt_id.Size = New System.Drawing.Size(430, 34)
-        Me.txt_id.TabIndex = 0
+        Me.btn_edit.FlatAppearance.BorderSize = 0
+        Me.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_edit.ForeColor = System.Drawing.Color.Brown
+        Me.btn_edit.IconChar = FontAwesome.Sharp.IconChar.Edit
+        Me.btn_edit.IconColor = System.Drawing.Color.Brown
+        Me.btn_edit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_edit.IconSize = 40
+        Me.btn_edit.Location = New System.Drawing.Point(195, 496)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(151, 40)
+        Me.btn_edit.TabIndex = 13
+        Me.btn_edit.Text = "កែប្រែ"
+        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_edit.UseVisualStyleBackColor = True
         '
-        'cmb_role
+        'btn_save
         '
-        Me.cmb_role.BackColor = System.Drawing.Color.MistyRose
-        Me.cmb_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmb_role.FormattingEnabled = True
-        Me.cmb_role.Location = New System.Drawing.Point(100, 380)
-        Me.cmb_role.Name = "cmb_role"
-        Me.cmb_role.Size = New System.Drawing.Size(429, 41)
-        Me.cmb_role.TabIndex = 1
+        Me.btn_save.FlatAppearance.BorderSize = 0
+        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_save.ForeColor = System.Drawing.Color.Brown
+        Me.btn_save.IconChar = FontAwesome.Sharp.IconChar.Save
+        Me.btn_save.IconColor = System.Drawing.Color.Brown
+        Me.btn_save.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_save.IconSize = 40
+        Me.btn_save.Location = New System.Drawing.Point(59, 496)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(151, 40)
+        Me.btn_save.TabIndex = 12
+        Me.btn_save.Text = "រក្សាទុក"
+        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_save.UseVisualStyleBackColor = True
         '
-        'Panel_id
+        'Icon_role
         '
-        Me.Panel_id.BackColor = System.Drawing.Color.Brown
-        Me.Panel_id.Location = New System.Drawing.Point(59, 81)
-        Me.Panel_id.Name = "Panel_id"
-        Me.Panel_id.Size = New System.Drawing.Size(470, 3)
-        Me.Panel_id.TabIndex = 2
+        Me.Icon_role.FlatAppearance.BorderSize = 0
+        Me.Icon_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Icon_role.IconChar = FontAwesome.Sharp.IconChar.UserShield
+        Me.Icon_role.IconColor = System.Drawing.Color.Brown
+        Me.Icon_role.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Icon_role.Location = New System.Drawing.Point(59, 381)
+        Me.Icon_role.Name = "Icon_role"
+        Me.Icon_role.Size = New System.Drawing.Size(40, 40)
+        Me.Icon_role.TabIndex = 11
+        Me.Icon_role.UseVisualStyleBackColor = True
         '
-        'Icon_id
+        'Panel_role
         '
-        Me.Icon_id.FlatAppearance.BorderSize = 0
-        Me.Icon_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Icon_id.IconChar = FontAwesome.Sharp.IconChar.AddressCard
-        Me.Icon_id.IconColor = System.Drawing.Color.Brown
-        Me.Icon_id.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Icon_id.IconSize = 40
-        Me.Icon_id.Location = New System.Drawing.Point(59, 40)
-        Me.Icon_id.Name = "Icon_id"
-        Me.Icon_id.Size = New System.Drawing.Size(40, 40)
-        Me.Icon_id.TabIndex = 3
-        Me.Icon_id.UseVisualStyleBackColor = True
+        Me.Panel_role.BackColor = System.Drawing.Color.Brown
+        Me.Panel_role.Location = New System.Drawing.Point(59, 422)
+        Me.Panel_role.Name = "Panel_role"
+        Me.Panel_role.Size = New System.Drawing.Size(470, 3)
+        Me.Panel_role.TabIndex = 10
+        '
+        'Icon_password
+        '
+        Me.Icon_password.FlatAppearance.BorderSize = 0
+        Me.Icon_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Icon_password.IconChar = FontAwesome.Sharp.IconChar.Lock
+        Me.Icon_password.IconColor = System.Drawing.Color.Brown
+        Me.Icon_password.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Icon_password.IconSize = 40
+        Me.Icon_password.Location = New System.Drawing.Point(59, 260)
+        Me.Icon_password.Name = "Icon_password"
+        Me.Icon_password.Size = New System.Drawing.Size(40, 40)
+        Me.Icon_password.TabIndex = 9
+        Me.Icon_password.UseVisualStyleBackColor = True
+        '
+        'Panel_password
+        '
+        Me.Panel_password.BackColor = System.Drawing.Color.Brown
+        Me.Panel_password.Location = New System.Drawing.Point(59, 301)
+        Me.Panel_password.Name = "Panel_password"
+        Me.Panel_password.Size = New System.Drawing.Size(470, 3)
+        Me.Panel_password.TabIndex = 8
+        '
+        'txt_password
+        '
+        Me.txt_password.BackColor = System.Drawing.Color.MistyRose
+        Me.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_password.ForeColor = System.Drawing.Color.Brown
+        Me.txt_password.Location = New System.Drawing.Point(100, 262)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.Size = New System.Drawing.Size(430, 34)
+        Me.txt_password.TabIndex = 7
         '
         'Icon_user
         '
@@ -192,142 +287,47 @@ Partial Class Frm_Users
         Me.txt_username.Size = New System.Drawing.Size(430, 34)
         Me.txt_username.TabIndex = 4
         '
-        'txt_password
+        'Icon_id
         '
-        Me.txt_password.BackColor = System.Drawing.Color.MistyRose
-        Me.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txt_password.ForeColor = System.Drawing.Color.Brown
-        Me.txt_password.Location = New System.Drawing.Point(100, 262)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.Size = New System.Drawing.Size(430, 34)
-        Me.txt_password.TabIndex = 7
+        Me.Icon_id.FlatAppearance.BorderSize = 0
+        Me.Icon_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Icon_id.IconChar = FontAwesome.Sharp.IconChar.AddressCard
+        Me.Icon_id.IconColor = System.Drawing.Color.Brown
+        Me.Icon_id.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Icon_id.IconSize = 40
+        Me.Icon_id.Location = New System.Drawing.Point(59, 40)
+        Me.Icon_id.Name = "Icon_id"
+        Me.Icon_id.Size = New System.Drawing.Size(40, 40)
+        Me.Icon_id.TabIndex = 3
+        Me.Icon_id.UseVisualStyleBackColor = True
         '
-        'Panel_password
+        'Panel_id
         '
-        Me.Panel_password.BackColor = System.Drawing.Color.Brown
-        Me.Panel_password.Location = New System.Drawing.Point(59, 301)
-        Me.Panel_password.Name = "Panel_password"
-        Me.Panel_password.Size = New System.Drawing.Size(470, 3)
-        Me.Panel_password.TabIndex = 8
+        Me.Panel_id.BackColor = System.Drawing.Color.Brown
+        Me.Panel_id.Location = New System.Drawing.Point(59, 81)
+        Me.Panel_id.Name = "Panel_id"
+        Me.Panel_id.Size = New System.Drawing.Size(470, 3)
+        Me.Panel_id.TabIndex = 2
         '
-        'Icon_password
+        'cmb_role
         '
-        Me.Icon_password.FlatAppearance.BorderSize = 0
-        Me.Icon_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Icon_password.IconChar = FontAwesome.Sharp.IconChar.Lock
-        Me.Icon_password.IconColor = System.Drawing.Color.Brown
-        Me.Icon_password.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Icon_password.IconSize = 40
-        Me.Icon_password.Location = New System.Drawing.Point(59, 260)
-        Me.Icon_password.Name = "Icon_password"
-        Me.Icon_password.Size = New System.Drawing.Size(40, 40)
-        Me.Icon_password.TabIndex = 9
-        Me.Icon_password.UseVisualStyleBackColor = True
+        Me.cmb_role.BackColor = System.Drawing.Color.MistyRose
+        Me.cmb_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmb_role.FormattingEnabled = True
+        Me.cmb_role.Location = New System.Drawing.Point(100, 380)
+        Me.cmb_role.Name = "cmb_role"
+        Me.cmb_role.Size = New System.Drawing.Size(429, 41)
+        Me.cmb_role.TabIndex = 1
         '
-        'Icon_role
+        'txt_id
         '
-        Me.Icon_role.FlatAppearance.BorderSize = 0
-        Me.Icon_role.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Icon_role.IconChar = FontAwesome.Sharp.IconChar.UserShield
-        Me.Icon_role.IconColor = System.Drawing.Color.Brown
-        Me.Icon_role.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Icon_role.Location = New System.Drawing.Point(59, 381)
-        Me.Icon_role.Name = "Icon_role"
-        Me.Icon_role.Size = New System.Drawing.Size(40, 40)
-        Me.Icon_role.TabIndex = 11
-        Me.Icon_role.UseVisualStyleBackColor = True
-        '
-        'Panel_role
-        '
-        Me.Panel_role.BackColor = System.Drawing.Color.Brown
-        Me.Panel_role.Location = New System.Drawing.Point(59, 422)
-        Me.Panel_role.Name = "Panel_role"
-        Me.Panel_role.Size = New System.Drawing.Size(470, 3)
-        Me.Panel_role.TabIndex = 10
-        '
-        'btn_save
-        '
-        Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_save.ForeColor = System.Drawing.Color.Brown
-        Me.btn_save.IconChar = FontAwesome.Sharp.IconChar.Save
-        Me.btn_save.IconColor = System.Drawing.Color.Brown
-        Me.btn_save.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btn_save.IconSize = 40
-        Me.btn_save.Location = New System.Drawing.Point(59, 496)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(151, 40)
-        Me.btn_save.TabIndex = 12
-        Me.btn_save.Text = "រក្សាទុក"
-        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_save.UseVisualStyleBackColor = True
-        '
-        'btn_edit
-        '
-        Me.btn_edit.FlatAppearance.BorderSize = 0
-        Me.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_edit.ForeColor = System.Drawing.Color.Brown
-        Me.btn_edit.IconChar = FontAwesome.Sharp.IconChar.Edit
-        Me.btn_edit.IconColor = System.Drawing.Color.Brown
-        Me.btn_edit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btn_edit.IconSize = 40
-        Me.btn_edit.Location = New System.Drawing.Point(195, 496)
-        Me.btn_edit.Name = "btn_edit"
-        Me.btn_edit.Size = New System.Drawing.Size(151, 40)
-        Me.btn_edit.TabIndex = 13
-        Me.btn_edit.Text = "កែប្រែ"
-        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_edit.UseVisualStyleBackColor = True
-        '
-        'btn_delete
-        '
-        Me.btn_delete.FlatAppearance.BorderSize = 0
-        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_delete.ForeColor = System.Drawing.Color.Brown
-        Me.btn_delete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
-        Me.btn_delete.IconColor = System.Drawing.Color.Brown
-        Me.btn_delete.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btn_delete.IconSize = 40
-        Me.btn_delete.Location = New System.Drawing.Point(352, 496)
-        Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(151, 40)
-        Me.btn_delete.TabIndex = 14
-        Me.btn_delete.Text = "លុប"
-        Me.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_delete.UseVisualStyleBackColor = True
-        '
-        'IconButton1
-        '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.IconButton1.IconColor = System.Drawing.Color.Brown
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 35
-        Me.IconButton1.Location = New System.Drawing.Point(1062, 0)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(35, 35)
-        Me.IconButton1.TabIndex = 15
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
-        'title
-        '
-        Me.title.FlatAppearance.BorderSize = 0
-        Me.title.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.title.Font = New System.Drawing.Font("Khmer OS Siemreap", 9.8!)
-        Me.title.ForeColor = System.Drawing.Color.Brown
-        Me.title.IconChar = FontAwesome.Sharp.IconChar.Users
-        Me.title.IconColor = System.Drawing.Color.Brown
-        Me.title.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.title.IconSize = 35
-        Me.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.title.Location = New System.Drawing.Point(0, 0)
-        Me.title.Name = "title"
-        Me.title.Size = New System.Drawing.Size(311, 40)
-        Me.title.TabIndex = 15
-        Me.title.Text = "បង្កើតគណនីថ្មី"
-        Me.title.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.title.UseVisualStyleBackColor = True
+        Me.txt_id.BackColor = System.Drawing.Color.MistyRose
+        Me.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_id.ForeColor = System.Drawing.Color.Brown
+        Me.txt_id.Location = New System.Drawing.Point(100, 42)
+        Me.txt_id.Name = "txt_id"
+        Me.txt_id.Size = New System.Drawing.Size(430, 34)
+        Me.txt_id.TabIndex = 0
         '
         'Frm_Users
         '
@@ -345,9 +345,9 @@ Partial Class Frm_Users
         Me.Text = "Frm_Users"
         Me.Panel_title.ResumeLayout(False)
         Me.Panel_left.ResumeLayout(False)
+        CType(Me.dgv_data, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_content.ResumeLayout(False)
         Me.Panel_content.PerformLayout()
-        CType(Me.dgv_data, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
