@@ -108,10 +108,22 @@
     <Compile Include="Forms\Frm_Academic.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Frm_Batch.Designer.vb">
+      <DependentUpon>Frm_Batch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Batch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Frm_Dashboard.Designer.vb">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Department.Designer.vb">
+      <DependentUpon>Frm_Department.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Department.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_Users.Designer.vb">
@@ -155,8 +167,14 @@
     <EmbeddedResource Include="Forms\Frm_Academic.resx">
       <DependentUpon>Frm_Academic.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Batch.resx">
+      <DependentUpon>Frm_Batch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Department.resx">
+      <DependentUpon>Frm_Department.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Users.resx">
       <DependentUpon>Frm_Users.vb</DependentUpon>
