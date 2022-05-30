@@ -126,6 +126,18 @@
     <Compile Include="Forms\Frm_Department.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Frm_Level.Designer.vb">
+      <DependentUpon>Frm_Level.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Level.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Specialty.Designer.vb">
+      <DependentUpon>Frm_Specialty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Specialty.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Frm_Users.Designer.vb">
       <DependentUpon>Frm_Users.vb</DependentUpon>
     </Compile>
@@ -175,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Department.resx">
       <DependentUpon>Frm_Department.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Level.resx">
+      <DependentUpon>Frm_Level.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Specialty.resx">
+      <DependentUpon>Frm_Specialty.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Users.resx">
       <DependentUpon>Frm_Users.vb</DependentUpon>
